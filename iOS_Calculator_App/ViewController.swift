@@ -232,4 +232,78 @@ class ViewController: UIViewController {
         }
         */
               
-}
+    }
+    //To-do:
+   //1. need to connect the +/- sign button to this action
+   //2. remove the initial zero
+   @IBAction func NumberButton_Pressed(_ sender: UIButton)
+   {
+       var numberInput:String = ""
+       let button = sender as UIButton
+       let currentInput = button.titleLabel!.text
+       _ = ResultLabel.text
+
+       switch currentInput
+       {
+       case "0":
+           numberInput.append("0")
+           ResultLabel.text?.append("0")
+//            if(resultLabelText != "0")
+//            {
+//                ResultLabel.text?.append("0")
+//            }
+       case ".":
+           numberInput.append(".")
+           ResultLabel.text?.append(".")
+//            if(!resultLabelText!.contains("."))
+//            {
+//                ResultLabel.text?.append(".")
+//            }
+           
+       case "1":
+           numberInput.append("1")
+           ResultLabel.text?.append("1")
+           
+       case "2":
+           numberInput.append("2")
+           ResultLabel.text?.append("2")
+       case "3":
+           numberInput.append("3")
+           ResultLabel.text?.append("3")
+       case "4":
+           numberInput.append("4")
+           ResultLabel.text?.append("4")
+       case "5":
+           numberInput.append("5")
+           ResultLabel.text?.append("5")
+       case "6":
+           numberInput.append("6")
+           ResultLabel.text?.append("6")
+       case "7":
+           numberInput.append("7")
+           ResultLabel.text?.append("7")
+       case "8":
+           numberInput.append("8")
+           numberInput.append("8")
+                      ResultLabel.text?.append("8")
+        case "9":
+            numberInput.append("9")
+            ResultLabel.text?.append("9ß")
+        default: break
+           
+          //            if((resultLabelText == "0") || (!resultLabelReady))
+          //            {
+          //                ResultLabel.text = ""
+          //                resultLabelReady = true
+          //            }
+          //
+          //            if(resultLabelReady)
+          //            {
+          //                ResultLabel.text?.append(currentInput!)
+          //                resultLabelReady = false
+          //            }
+    }
+                  
+        input.append(numberInput)
+       print("input: " + input)
+    }
