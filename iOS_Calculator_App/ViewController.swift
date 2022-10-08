@@ -151,24 +151,85 @@ class ViewController: UIViewController {
    //        case "X":
     
     // Event Handlers
-    
-    @IBAction func OperatorButton_Pressed(_ sender: UIButton)
-    {
+    }
+
+    // Event Handlers
+
+   @IBAction func OperatorButton_Pressed(_ sender: UIButton)
+   {
+       var activeOperator:String = ""
+       let button = sender as UIButton
+       let currentInput = button.titleLabel!.text
+       _ = ResultLabel.text
        
-    }
-    
-    @IBAction func NumberButton_Pressed(_ sender: UIButton)
-    {
-    }
-    
-    @IBAction func ExtraButton_Pressed(_ sender: UIButton)
-    {
-        
+       //To do list:
+       //1. repeated input of a same operator is ignored here
+       //2. The input of a different operator is ignored here. Future solution: to replace the prceeding one with the latest input
+       switch currentInput
+       {
+       case "+":
+           activeOperator = "+"
+       case "-":
+           activeOperator = "-"
+       case "X":
+           activeOperator = "X"
+       case "/":
+           activeOperator = "/"
+       case "=":
+           processResult()
+       default:
+           print("")
+       }
+       
+       input.append(activeOperator)
+       
+       /*
+        if(!haveLeftOperand)
+        {
+            haveLeftOperand = true
+            leftOperand = Float(resultLabelText!)!
+            resultLabelReady = false
         }
-    
+        else
+        {
+            rightOperand = Float(resultLabelText!)!
+            haveRightOperand = true
+        }
+               
+            if(haveLeftOperand && haveRightOperand)
+        {
+            Evaluate()
+            leftOperand = result
+            rightOperand = 0.0
+            resultLabelReady = false
+        }
+        */
+               
+   }
+       
+   
+       /*
+       if(!haveLeftOperand)
+       {
+            haveLeftOperand = true
+            leftOperand = Float(resultLabelText!)!
+            resultLabelReady = false
+       }
+       else
+       {
+            rightOperand = Float(resultLabelText!)!
+            haveRightOperand = true
+       }
+        
     }
-
+        
+        if(haveLeftOperand && haveRightOperand)
+        {
+            Evaluate()
+            leftOperand = result
+            rightOperand = 0.0
+            resultLabelReady = false
+        }
+        */
+              
 }
-
-
-
