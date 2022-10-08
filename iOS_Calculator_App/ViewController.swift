@@ -307,3 +307,32 @@ class ViewController: UIViewController {
         input.append(numberInput)
        print("input: " + input)
     }
+    @IBAction func ExtraButton_Pressed(_ sender: UIButton)
+   {
+       let button = sender as UIButton
+       let currentInput = button.titleLabel!.text
+       switch currentInput {
+       case "C":
+           ResultLabel.text = "0"
+           result = 0.0
+           leftOperand = 0.0
+           rightOperand = 0.0
+           haveLeftOperand = false
+           haveRightOperand = false
+           activeOperator = ""
+           input = "";
+           
+       default:
+           if(ResultLabel.text!.count > 1)
+           {
+               ResultLabel.text?.removeLast()
+           }
+           else
+           {
+               ResultLabel.text = "0"
+           }
+       }
+   }
+   
+   
+}
