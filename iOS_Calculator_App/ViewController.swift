@@ -1,3 +1,21 @@
+/*
+ Group 14
+ Name Bing Pan                               301317241
+ Name Wilson Mungai Muguthi                  301287641
+ Name Gideon Shewana                         301195064
+ 
+ Last Modification: 10/08/2022
+ 
+ Version 1
+ 
+ Description
+ 
+ A simple calculator that calculates the simplest input with operations of +,-,/,x,%, and displays
+ the results in the format of a float number.
+ This app cannot handle special input cases and exceptions yet. These features will be implemented
+ during our next milestone.
+ */
+
 import UIKit
 
 class ViewController: UIViewController {
@@ -262,8 +280,7 @@ class ViewController: UIViewController {
     
     
     //To-do:
-    //1. need to connect the +/- sign button to this action
-    //2. remove the initial zero
+    // remove the initial zero
     @IBAction func NumberButton_Pressed(_ sender: UIButton)
     {
         var numberInput:String = ""
