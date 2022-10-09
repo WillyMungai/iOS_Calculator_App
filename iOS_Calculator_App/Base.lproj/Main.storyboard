@@ -279,18 +279,22 @@
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="OperatorButton_Pressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EUW-j3-Xrq"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <connections>
+                        <outlet property="FinalResultLabel" destination="hfA-EX-Ed4" id="pbG-ih-yDw"/>
                         <outlet property="ResultLabel" destination="e6d-dS-61e" id="iTo-4V-VVf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="130.76923076923077" y="-28.436018957345969"/>
+            <point key="canvasLocation" x="-89" y="-151"/>
         </scene>
     </scenes>
 </document>
