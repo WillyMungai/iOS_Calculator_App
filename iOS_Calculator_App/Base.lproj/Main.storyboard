@@ -106,6 +106,9 @@
                                                 <buttonConfiguration key="configuration" style="gray" title="AC">
                                                     <fontDescription key="titleFontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="ExtraButton_Pressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="icm-On-Hbo"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pi9-Y0-O3i">
                                                 <rect key="frame" x="497.66666666666663" y="0.0" width="42" height="30"/>
@@ -116,6 +119,9 @@
                                                 <buttonConfiguration key="configuration" style="gray" title="CE">
                                                     <fontDescription key="titleFontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="ExtraButton_Pressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NF9-rC-pIL"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CRO-vo-Sdg">
                                                 <rect key="frame" x="568.66666666666663" y="0.0" width="42.333333333333371" height="30"/>
@@ -126,6 +132,9 @@
                                                 <buttonConfiguration key="configuration" style="gray" title="%">
                                                     <fontDescription key="titleFontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="OperatorButton_Pressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IOh-LH-3cL"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M19-in-mBl">
                                                 <rect key="frame" x="640" y="0.0" width="42" height="30"/>
@@ -136,6 +145,9 @@
                                                 <buttonConfiguration key="configuration" style="gray" title="+">
                                                     <fontDescription key="titleFontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="OperatorButton_Pressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RGT-PO-hS5"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -158,9 +170,12 @@
                                                     <constraint firstAttribute="height" constant="30" id="Szd-NE-hcO"/>
                                                 </constraints>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="gray" title="x2">
+                                                <buttonConfiguration key="configuration" style="gray" title="√">
                                                     <fontDescription key="titleFontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="OperatorButton_Pressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Sgw-jK-9gh"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G9S-Tb-Urf">
                                                 <rect key="frame" x="142.33333333333334" y="0.0" width="42" height="30"/>
@@ -191,6 +206,9 @@
                                                 <buttonConfiguration key="configuration" style="gray" title="ex">
                                                     <fontDescription key="titleFontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="OperatorButton_Pressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ydY-P2-kJQ"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s6S-a5-jav">
                                                 <rect key="frame" x="355.66666666666669" y="0.0" width="42" height="30"/>
@@ -211,6 +229,9 @@
                                                 <buttonConfiguration key="configuration" style="gray" title="7">
                                                     <fontDescription key="titleFontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="NumberButton_Pressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TUZ-Sj-6yX"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oqS-E7-nlw">
                                                 <rect key="frame" x="497.66666666666663" y="0.0" width="42" height="30"/>
@@ -221,6 +242,9 @@
                                                 <buttonConfiguration key="configuration" style="gray" title="8">
                                                     <fontDescription key="titleFontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="NumberButton_Pressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZmY-hg-PLY"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mJu-XS-hrF">
                                                 <rect key="frame" x="568.66666666666663" y="0.0" width="42.333333333333371" height="30"/>
@@ -231,6 +255,9 @@
                                                 <buttonConfiguration key="configuration" style="gray" title="9">
                                                     <fontDescription key="titleFontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="NumberButton_Pressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="F9I-AR-dTX"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eJW-KT-Y8r">
                                                 <rect key="frame" x="640" y="0.0" width="42" height="30"/>
@@ -241,6 +268,9 @@
                                                 <buttonConfiguration key="configuration" style="gray" title="-">
                                                     <fontDescription key="titleFontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="OperatorButton_Pressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dpj-PG-TxI"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -316,6 +346,9 @@
                                                 <buttonConfiguration key="configuration" style="gray" title="4">
                                                     <fontDescription key="titleFontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="NumberButton_Pressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WqR-Yq-Lwj"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bg2-S0-jRg">
                                                 <rect key="frame" x="497.66666666666663" y="0.0" width="42" height="30"/>
@@ -326,6 +359,9 @@
                                                 <buttonConfiguration key="configuration" style="gray" title="5">
                                                     <fontDescription key="titleFontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="NumberButton_Pressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qPj-ct-uiA"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bWN-zH-noY">
                                                 <rect key="frame" x="568.66666666666663" y="0.0" width="42.333333333333371" height="30"/>
@@ -336,6 +372,9 @@
                                                 <buttonConfiguration key="configuration" style="gray" title="6">
                                                     <fontDescription key="titleFontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="NumberButton_Pressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3cH-vc-R0i"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Xe-gc-UGW">
                                                 <rect key="frame" x="640" y="0.0" width="42" height="30"/>
@@ -346,6 +385,9 @@
                                                 <buttonConfiguration key="configuration" style="gray" title="X">
                                                     <fontDescription key="titleFontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="OperatorButton_Pressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WSN-xX-WdJ"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -371,6 +413,9 @@
                                                 <buttonConfiguration key="configuration" style="gray" title="sin">
                                                     <fontDescription key="titleFontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="OperatorButton_Pressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bpA-7W-Dhv"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zSU-VY-giY">
                                                 <rect key="frame" x="142.33333333333334" y="0.0" width="42" height="30"/>
@@ -381,6 +426,9 @@
                                                 <buttonConfiguration key="configuration" style="gray" title="cos">
                                                     <fontDescription key="titleFontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="OperatorButton_Pressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="akF-H2-ehJ"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dCq-rL-uYE">
                                                 <rect key="frame" x="213.33333333333334" y="0.0" width="42" height="30"/>
@@ -391,6 +439,9 @@
                                                 <buttonConfiguration key="configuration" style="gray" title="tan">
                                                     <fontDescription key="titleFontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="OperatorButton_Pressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fgm-Cu-Rd1"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WTy-KV-gMx">
                                                 <rect key="frame" x="284.33333333333331" y="0.0" width="42.333333333333314" height="30"/>
@@ -421,6 +472,9 @@
                                                 <buttonConfiguration key="configuration" style="gray" title="1">
                                                     <fontDescription key="titleFontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="NumberButton_Pressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="W7s-fu-TQh"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tvC-ww-61b">
                                                 <rect key="frame" x="497.66666666666663" y="0.0" width="42" height="30"/>
@@ -431,6 +485,9 @@
                                                 <buttonConfiguration key="configuration" style="gray" title="2">
                                                     <fontDescription key="titleFontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="NumberButton_Pressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yKz-iP-iWs"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M1K-zX-LYO">
                                                 <rect key="frame" x="568.66666666666663" y="0.0" width="42.333333333333371" height="30"/>
@@ -441,6 +498,9 @@
                                                 <buttonConfiguration key="configuration" style="gray" title="3">
                                                     <fontDescription key="titleFontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="NumberButton_Pressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="i3e-k0-25w"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nQ7-3c-aPv">
                                                 <rect key="frame" x="640" y="0.0" width="42" height="30"/>
@@ -451,6 +511,9 @@
                                                 <buttonConfiguration key="configuration" style="gray" title="/">
                                                     <fontDescription key="titleFontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="OperatorButton_Pressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="C5g-1r-SUD"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -497,9 +560,12 @@
                                                     <constraint firstAttribute="width" constant="50" id="3CM-Zb-DFf"/>
                                                 </constraints>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="gray" title="pi">
+                                                <buttonConfiguration key="configuration" style="gray" title="π">
                                                     <fontDescription key="titleFontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="OperatorButton_Pressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0GL-SK-LVJ"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i6b-Nf-6D4">
                                                 <rect key="frame" x="316" y="0.0" width="50" height="30"/>
@@ -511,6 +577,9 @@
                                                 <buttonConfiguration key="configuration" style="gray" title="Rand">
                                                     <fontDescription key="titleFontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="OperatorButton_Pressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jEd-PZ-hWI"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AYG-fp-ykc">
                                                 <rect key="frame" x="395" y="0.0" width="50" height="30"/>
@@ -522,6 +591,9 @@
                                                 <buttonConfiguration key="configuration" style="gray" title="0">
                                                     <fontDescription key="titleFontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="NumberButton_Pressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QmZ-fT-dpK"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qSH-Tn-wXD">
                                                 <rect key="frame" x="474" y="0.0" width="50" height="30"/>
@@ -533,6 +605,9 @@
                                                 <buttonConfiguration key="configuration" style="gray" title=".">
                                                     <fontDescription key="titleFontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="NumberButton_Pressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DLS-2R-MdB"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s12-xq-Ort">
                                                 <rect key="frame" x="553" y="0.0" width="50" height="30"/>
@@ -555,6 +630,9 @@
                                                 <buttonConfiguration key="configuration" style="gray" title="&lt;-">
                                                     <fontDescription key="titleFontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="15"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="ExtraButton_Pressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IJo-O8-2dd"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -577,7 +655,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hfA-EX-Ed4">
-                                <rect key="frame" x="20" y="67" width="335" height="56"/>
+                                <rect key="frame" x="25" y="305" width="335" height="56"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -585,7 +663,7 @@
                                 <variation key="heightClass=regular-widthClass=compact" hidden="NO"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e6d-dS-61e">
-                                <rect key="frame" x="20" y="143" width="335" height="65.666666666666686"/>
+                                <rect key="frame" x="25" y="381" width="335" height="65.666666666666686"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="55"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -593,7 +671,7 @@
                                 <variation key="heightClass=regular-widthClass=compact" hidden="NO"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="kEg-h8-18Z">
-                                <rect key="frame" x="20" y="228.66666666666663" width="293.33333333333331" height="298.66666666666669"/>
+                                <rect key="frame" x="25" y="466" width="293.33333333333331" height="298.66666666666669"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="53p-YQ-0Z3">
                                         <rect key="frame" x="0.0" y="0.0" width="293.33333333333331" height="48.666666666666664"/>
@@ -876,7 +954,7 @@
                                                     <color key="baseForegroundColor" red="0.911929667" green="0.38242548700000001" blue="0.1724565029" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="NumberButton_Pressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KNR-YS-iPy"/>
+                                                    <action selector="OperatorButton_Pressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="clz-6p-q3p"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oUv-4r-1Pq">
@@ -897,7 +975,7 @@
                                 <variation key="heightClass=regular-widthClass=compact" hidden="NO"/>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oBq-Zq-tle">
-                                <rect key="frame" x="20" y="692.66666666666663" width="335" height="35.333333333333371"/>
+                                <rect key="frame" x="25" y="930" width="335" height="35.333333333333371"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="CALCULATE" buttonSize="mini">
@@ -955,20 +1033,20 @@
                                 <exclude reference="kf6-RJ-A4q"/>
                                 <exclude reference="xFN-CS-VSD"/>
                                 <exclude reference="xej-7r-jld"/>
+                                <exclude reference="pMB-0b-blO"/>
+                                <exclude reference="tB8-CD-5JN"/>
                                 <exclude reference="B3X-ws-LUg"/>
                                 <exclude reference="G82-RX-6wX"/>
                                 <exclude reference="R5x-Fe-e7L"/>
-                                <exclude reference="0IC-iz-8Qk"/>
-                                <exclude reference="LuN-aw-CYv"/>
-                                <exclude reference="bfx-V4-27F"/>
-                                <exclude reference="pMB-0b-blO"/>
-                                <exclude reference="tB8-CD-5JN"/>
                                 <exclude reference="MmX-Jv-jm4"/>
                                 <exclude reference="R41-ZP-pYU"/>
                                 <exclude reference="rCQ-px-nGH"/>
                                 <exclude reference="9qC-lu-cvm"/>
                                 <exclude reference="Ncf-xh-HbG"/>
                                 <exclude reference="iWl-KY-boZ"/>
+                                <exclude reference="0IC-iz-8Qk"/>
+                                <exclude reference="LuN-aw-CYv"/>
+                                <exclude reference="bfx-V4-27F"/>
                                 <exclude reference="Wuy-hM-vb8"/>
                                 <exclude reference="fzB-1U-3qJ"/>
                             </mask>
@@ -1014,7 +1092,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-129" y="-282"/>
+            <point key="canvasLocation" x="171" y="-1154"/>
         </scene>
     </scenes>
 </document>

@@ -33,6 +33,7 @@ class ViewController: UIViewController {
     var numberInput = [String]();
     var operatorInput = [String]();
     var finalInput = [String]();
+    var sign:String = "+";
     
 
     //Result Label
@@ -47,198 +48,390 @@ class ViewController: UIViewController {
     
     
     func evalute(){
-        processInput();
-        mergeInput();
-        calculate();
-    }
-    
-    func calculate(){
-        performPercentage(input: finalInput)
-        performMultiplyDivide(input: finalInput)
-        performAddSubstract(input: finalInput)
-        FinalResultLabel.text = finalInput[0]
-    }
-    
-    
-    // Operator Functions
-    func add(lhs: String, rhs: String)->Float
-    {
-        return Float(lhs)! + Float(rhs)!
-    }
-    
-    func subtract(lhs: String, rhs: String) -> Float
-    {
-        return Float(lhs)! - Float(rhs)!
-    }
-    
-    func multiply(lhs: String, rhs: String) -> Float
-    {
-        return Float(lhs)! * Float(rhs)!
-    }
-    
-    func divide(lhs: String, rhs: String)-> Float
-    {
-        return Float(lhs)! / Float(rhs)!
-    }
-    
-    
-    func retrieveOperators(ch:String) ->[String] {
-        var operators = [String]()
-        operators.append(ch)
-        return operators
-    }
-    
-    
-    func isNumber(_ char: Character) -> Bool {
-        var state: Bool = false;
-        
-        if ((char != "+") && (char != "-") && (char != "X") && (char != "/")){
-            state = true;
+            processInput();
+            mergeInput();
+            calculate();
         }
-        return state;
-    }
-    
-    
-    //parse the user input and store them into two String arrays, i.e. numberInput & operatorInput
-    func processInput(){
-        var inputToken: String = "";
-        var length: Int = 0;
         
-        if (!input.isEmpty){
-            length = input.count - 1
-            
-            for idx in 0...length{
-                let ch = input[input.index(input.startIndex, offsetBy: idx)];
-                
-                if(!isNumber(ch)){
-                    operatorInput += retrieveOperators(ch: String(ch))
-                }else{
-                    inputToken.append(String(ch))
-                    if(idx < length){
-                        continue
-                    }
-                }
-                numberInput.append(inputToken)
-                inputToken = "";
-            }
+        func calculate(){
+            performGeneratingRandomInt()
+            performPiCalculation(input: finalInput)
+            performSquareRootCalculation(input: finalInput)
+            performExponentCalculation(input: finalInput)
+            performSinCalculation(input: finalInput)
+            performCosCalculation(input: finalInput)
+            performTanCalculation(input: finalInput)
+            performPercentage(input: finalInput)
+            performMultiplyDivide(input: finalInput)
+            performAddSubstract(input: finalInput)
         }
-    }
-    
-    //Based on the user's input sequence, merge numberInput and operatorInput arrays into one final String array, which is finalInput String array
-    func mergeInput(){
-        let numLength = numberInput.count - 1;
-        let operatorLength = operatorInput.count - 1;
         
-        for idx in 0...numLength{
-            finalInput.append(numberInput[idx]);
-            if(idx <= operatorLength){
-                finalInput.append(operatorInput[idx]);
-            }
+        
+        // Operator Functions
+        func add(lhs: String, rhs: String)->Float{
+            return Float(lhs)! + Float(rhs)!
         }
-        print("finalInput:")
-        dump(finalInput)
-    }
-    
-    //Warning: this function can not process correctly the percentage input at the end of the user input
-    func performPercentage(input: [String]) {
-        var temp:String = "";
+        
+        func subtract(lhs: String, rhs: String) -> Float{
+            return Float(lhs)! - Float(rhs)!
+        }
+        
+        func multiply(lhs: String, rhs: String) -> Float{
+            return Float(lhs)! * Float(rhs)!
+        }
+        
+        func divide(lhs: String, rhs: String)-> Float{
+            return Float(lhs)! / Float(rhs)!
+        }
+        
+        func calculate_pi(val: String) -> String {
+            return String(Float(val)! * 3.1415926)
+        }
+        
+        func calculate_squareroot(val: String) -> Float {
+            return  Float(val)!.squareRoot()
+        }
+        
+        
+        func calculate_exponent(val: String) -> Float {
+            return Float(val)! * Float(val)!
+        }
+        
+        
+        func calculate_sin(val: String) -> Float {
+            return sin(Float(val)!)
+        }
+        
+        func calculate_cos(val: String) -> Float {
+            return cos(Float(val)!)
+        }
+        
+        
+        func calculate_tan(val: String) -> Float {
+            return tan(Float(val)!)
+        }
+        
        
-        for idx in 0...finalInput.count-1{
-            if (finalInput[idx].contains("%") == true){
-                for char in finalInput[idx]{
-                    if(char != "%"){
-                        temp.append(char)
+        func retrieveOperators(ch:String) ->[String] {
+            var operators = [String]()
+            operators.append(ch)
+            return operators
+        }
+        
+        
+        func isNumber(_ char: Character) -> Bool {
+            var state: Bool = false;
+            
+            if ((char != "+") && (char != "-") && (char != "X") && (char != "/")){
+                state = true;
+            }
+            return state;
+        }
+        
+        
+        //parse the user input and store them into two String arrays,
+        //i.e. numberInput & operatorInput
+        func processInput(){
+            var inputToken: String = "";
+            var length: Int = 0;
+            
+            if (!input.isEmpty){
+                length = input.count - 1
+                
+                for idx in 0...length{
+                    let ch = input[input.index(input.startIndex, offsetBy: idx)];
+                    
+                    if(!isNumber(ch)){
+                        operatorInput += retrieveOperators(ch: String(ch))
+                    }else{
+                        inputToken.append(String(ch))
+                        if(idx < length){
+                            continue
+                        }
+                    }
+                    numberInput.append(inputToken)
+                    inputToken = "";
+                }
+            }
+        }
+        
+        
+        //Based on the user's input sequence,
+        //merge numberInput and operatorInput arrays into one final String array,
+        //which is named as "finalInput" String array
+        func mergeInput(){
+            let numLength = numberInput.count - 1;
+            let operatorLength = operatorInput.count - 1;
+            
+            for idx in 0...numLength{
+                finalInput.append(numberInput[idx]);
+                if(idx <= operatorLength){
+                    finalInput.append(operatorInput[idx]);
+                }
+            }
+            print("finalInput:")
+            dump(finalInput)
+        }
+        
+        
+        func performSignConversion(){
+            var temp:String = "";
+            
+            for idx in 0...finalInput.count-1{
+                if (finalInput[idx] == "positiveSign"){
+                    temp = finalInput[idx+1]
+                    finalInput[idx] = temp
+                    }
+                
+                if (finalInput[idx] == "negativeSign"){
+                    var i = finalInput[idx+1]
+                    var n = Int(i)! * -1
+                    finalInput[idx] = String(n)
+                    }
+            }
+                
+            
+            print("After sign conversion , the finalInput: ")
+            dump(finalInput)
+        }
+        
+        
+        //This function generates an Int between 1 and 1000 only
+        //And this function assumes that there is an operator both immediately before and after this function
+        func performGeneratingRandomInt() {
+            var temp:String = "";
+            
+            for idx in 0...finalInput.count-1{
+                if (finalInput[idx] == "R"){
+                    temp = String(Int.random(in: 1..<1000))
+                    finalInput[idx] = temp
                     }
                 }
-                print("prior to convert to float, temp: \(temp)")
-                let p : Float = Float(temp)!
-                print("prior to convert to float, p: \(p)")
-                temp = String( Float(temp)! / 100)
-                finalInput[idx] = temp
-            }
+            print("After generating a random int , the finalInput: ")
+            dump(finalInput)
         }
+       
         
-        print("after cal % , the finalInput: ")
-        dump(finalInput)
-    }
-    
-    func isPercentage(input:String) -> Bool{
-        return input == "%" ? true : false;
-    }
-    
-    
-    func performMultiplyDivide(input: [String]) {
-        var temp:String = "";
-        
-        while(hasHigerPrecedenceOperator(input: finalInput)){
-            for idx in 0...finalInput.count-1{
-                if (finalInput[idx] == "X"){
-                    temp = String(multiply(lhs:finalInput[idx-1], rhs:finalInput[idx+1]))
-                    finalInput[idx-1] = temp
-                    finalInput.removeSubrange(idx...idx+1)
-                    break
-                }
-                else if (finalInput[idx] == "/"){
-                    temp = String(divide(lhs:finalInput[idx-1], rhs:finalInput[idx+1]))
-                    finalInput[idx-1] = temp
-                    finalInput.removeSubrange(idx...idx+1)
-                    break
-                }
-            }
-        }
-        print("after cal X and /, the finalInput: ")
-        dump(finalInput)
-    }
+    //This program assumes that π is entered after a number
+        func performPiCalculation(input: [String]) {
+            var temp:String = "";
 
-    
-    func performAddSubstract(input: [String]){
-        var temp:String = "";
-        var finished:Bool = false;
-        
-        while(finished != true){
-            for idx in 0...finalInput.count-1 {
-                if (finalInput[idx] == "+"){
-                    temp = String(add(lhs:finalInput[idx-1], rhs:finalInput[idx+1]))
-                    finalInput[idx-1] = temp
-                    finalInput.removeSubrange(idx...idx+1)
-                    break
+            for idx in 0...finalInput.count-1{
+                if (finalInput[idx].contains("π") == true){
+                    for char in finalInput[idx]{
+                        if(char != "π"){
+                            temp.append(char)
+                        }
+                    }
+                    temp = calculate_pi(val: temp)
+                    finalInput[idx] = temp
+                    }
                 }
-                else if (finalInput[idx] == "-"){
-                    temp = String(subtract(lhs:finalInput[idx-1], rhs:finalInput[idx+1]))
-                    finalInput[idx-1] = temp
-                    finalInput.removeSubrange(idx...idx+1)
-                    break
+            print("after cal π , the finalInput: ")
+            dump(finalInput)
+        }
+        
+        
+        //This program assumes that √ operator is entered before a number
+        func performSquareRootCalculation(input: [String]) {
+            var temp:String = "";
+            
+            for idx in 0...finalInput.count-1{
+                if (finalInput[idx].contains("√") == true){
+                    
+                    for char in finalInput[idx]{
+                        if(char != "√"){
+                            temp.append(char)
+                        }
+                    }
+                    temp = String(calculate_squareroot(val: temp))
+                    finalInput[idx] = temp
+                    }
+                }
+            print("after cal √ , the finalInput: ")
+            dump(finalInput)
+        }
+        
+        
+        //This program assumes that exponent operator is entered after a number
+        func performExponentCalculation(input: [String]) {
+            var temp:String = "";
+           
+            for idx in 0...finalInput.count-1{
+                if (finalInput[idx].contains("E") == true){
+                    for char in finalInput[idx]{
+                        if(char != "E"){
+                            temp.append(char)
+                        }
+                    }
+                    temp = String(calculate_exponent(val: temp))
+                    finalInput[idx] = temp
+                    }
+                }
+            print("after cal Exponent , the finalInput: ")
+            dump(finalInput)
+        }
+        
+        
+        //This program assumes that sin operator is entered before a number
+        func performSinCalculation(input: [String]) {
+            var temp:String = "";
+           
+            for idx in 0...finalInput.count-1{
+                if (finalInput[idx].contains("S") == true){
+                    for char in finalInput[idx]{
+                        if(char != "S"){
+                            temp.append(char)
+                        }
+                    }
+                    temp = String(calculate_sin(val: temp))
+                    finalInput[idx] = temp
+                    }
+                }
+            print("after cal Sin , the finalInput: ")
+            dump(finalInput)
+        }
+        
+        
+        //This program assumes that cos operator is entered before a number
+        func performCosCalculation(input: [String]) {
+            var temp:String = "";
+            
+            for idx in 0...finalInput.count-1{
+                if (finalInput[idx].contains("C") == true){
+                    for char in finalInput[idx]{
+                        if(char != "C"){
+                            temp.append(char)
+                        }
+                    }
+                    temp = String(calculate_cos(val: temp))
+                    finalInput[idx] = temp
+                    }
+                }
+            print("after cal Cos , the finalInput: ")
+            dump(finalInput)
+        }
+        
+        
+        //This program assumes that tan operator is entered before a number
+        func performTanCalculation(input: [String]) {
+            var temp:String = "";
+            
+            for idx in 0...finalInput.count-1{
+                if (finalInput[idx].contains("T") == true){
+                    for char in finalInput[idx]{
+                        if(char != "T"){
+                            temp.append(char)
+                        }
+                    }
+                    temp = String(calculate_cos(val: temp))
+                    finalInput[idx] = temp
+                    }
+                }
+            print("after cal Tan , the finalInput: ")
+            dump(finalInput)
+        }
+        
+        
+        
+        //Warning:
+        //this function can not process correctly the percentage input at the end of the user input
+        func performPercentage(input: [String]) {
+            var temp:String = "";
+           
+            for idx in 0...finalInput.count-1{
+                if (finalInput[idx].contains("%") == true){
+                    for char in finalInput[idx]{
+                        if(char != "%"){
+                            temp.append(char)
+                        }
+                    }
+                    temp = String( Float(temp)! / 100)
+                    finalInput[idx] = temp
                 }
             }
             
-            if(finalInput.count == 1){
-                finished = true;
-            }
+            print("after cal % , the finalInput: ")
+            dump(finalInput)
         }
-        print("after cal + and -, the finalInput: ")
-        dump(finalInput)
-    }
-    
-    
-    func hasHigerPrecedenceOperator(input: [String]) -> Bool{
-        var hasHigerPrecedOperator: Bool = false;
         
-        for str in finalInput{
-            if(isHigherPrecedenceOperator(op:str)){
-                hasHigerPrecedOperator = true;
+        func isPercentage(input:String) -> Bool{
+            return input == "%" ? true : false;
+        }
+        
+        
+        func performMultiplyDivide(input: [String]) {
+            var temp:String = "";
+            
+            while(hasHigerPrecedenceOperator(input: finalInput)){
+                for idx in 0...finalInput.count-1{
+                    if (finalInput[idx] == "X"){
+                        temp = String(multiply(lhs:finalInput[idx-1], rhs:finalInput[idx+1]))
+                        finalInput[idx-1] = temp
+                        finalInput.removeSubrange(idx...idx+1)
+                        break
+                    }
+                    else if (finalInput[idx] == "/"){
+                        temp = String(divide(lhs:finalInput[idx-1], rhs:finalInput[idx+1]))
+                        finalInput[idx-1] = temp
+                        finalInput.removeSubrange(idx...idx+1)
+                        break
+                    }
+                }
             }
+            print("after cal X and /, the finalInput: ")
+            dump(finalInput)
         }
-        return hasHigerPrecedOperator;
-    }
-    
-    
-    func isHigherPrecedenceOperator(op:String) -> Bool{
-        var isHigher: Bool = false;
-        if ((op == "X") || (op == "/")){
-            isHigher = true;
+
+        
+        func performAddSubstract(input: [String]){
+            var temp:String = "";
+            var finished:Bool = false;
+            
+            while(finished != true){
+                for idx in 0...finalInput.count-1 {
+                    if (finalInput[idx] == "+"){
+                        temp = String(add(lhs:finalInput[idx-1], rhs:finalInput[idx+1]))
+                        finalInput[idx-1] = temp
+                        finalInput.removeSubrange(idx...idx+1)
+                        break
+                    }
+                    else if (finalInput[idx] == "-"){
+                        temp = String(subtract(lhs:finalInput[idx-1], rhs:finalInput[idx+1]))
+                        finalInput[idx-1] = temp
+                        finalInput.removeSubrange(idx...idx+1)
+                        break
+                    }
+                }
+                
+                if(finalInput.count == 1){
+                    finished = true;
+                }
+            }
+            print("after cal + and -, the finalInput: ")
+            dump(finalInput)
         }
-        return isHigher;
-    }
+        
+        
+        func hasHigerPrecedenceOperator(input: [String]) -> Bool{
+            var hasHigerPrecedOperator: Bool = false;
+            
+            for str in finalInput{
+                if(isHigherPrecedenceOperator(op:str)){
+                    hasHigerPrecedOperator = true;
+                }
+            }
+            return hasHigerPrecedOperator;
+        }
+        
+        
+        func isHigherPrecedenceOperator(op:String) -> Bool{
+            var isHigher: Bool = false;
+            if ((op != "+") || (op != "-")){
+                isHigher = true;
+            }
+            return isHigher;
+        }
     
     
     // Event Handlers
@@ -254,28 +447,44 @@ class ViewController: UIViewController {
         //2. The input of a different operator is ignored here. Future solution: to replace the prceeding one with the latest input
         switch currentInput
         {
+        case "sin":
+            activeOperator = "S"
+        case "cos":
+            activeOperator = "C"
+        case "tan":
+            activeOperator = "T"
+        case "ex":
+            activeOperator = "E"
+        case "√":
+            activeOperator = "√"
+        case "π":
+            activeOperator = "π"
+        case "Rand":
+            activeOperator = "R"
         case "+":
-            ResultLabel.text = ""
             activeOperator = "+"
         case "-":
-            ResultLabel.text = ""
             activeOperator = "-"
         case "X":
-            ResultLabel.text = ""
             activeOperator = "X"
         case "/":
-            ResultLabel.text = ""
             activeOperator = "/"
         case "%":
             activeOperator = "%"
+        case "+/-":
+            if(sign == "+"){
+                activeOperator = "positiveSign"
+                sign = "-"
+            }else{
+                activeOperator = "negativeSign"
+                sign = "+"
+            }
         case "CALCULATE":
             evalute()
         default:
             print("")
         }
-        
         input.append(activeOperator)
-        
     }
     
     
