@@ -63,7 +63,6 @@ class ViewController: UIViewController {
             performTanCalculation(input: finalInput)
             performPercentage(input: finalInput)
             performMultiplyDivide(input: finalInput)
-            print("as0")
             performAddSubstract(input: finalInput)
         }
         
@@ -361,51 +360,45 @@ class ViewController: UIViewController {
         }
         
         
-        func performMultiplyDivide(input: [String]) {
-            var temp:String = "";
-            print("nd")
-            while(hasHigerPrecedenceOperator(input: finalInput)){
-                for idx in 0...finalInput.count-1{
-                    if (finalInput[idx] == "X"){
-                        temp = String(multiply(lhs:finalInput[idx-1], rhs:finalInput[idx+1]))
-                        finalInput[idx-1] = temp
-                        finalInput.removeSubrange(idx...idx+1)
-                        print("nd1")
-                        break
-                    }
-                    else if (finalInput[idx] == "/"){
-                        temp = String(divide(lhs:finalInput[idx-1], rhs:finalInput[idx+1]))
-                        finalInput[idx-1] = temp
-                        finalInput.removeSubrange(idx...idx+1)
-                        print("nd2")
-                        break
-                    }
-                    dump(finalInput)
+    func performMultiplyDivide(input: [String]) {
+        var temp:String="";
+        print("nd")
+        while(finalInput.contains("X") || finalInput.contains("/")){
+            for idx in 0...finalInput.count-1{
+                if (finalInput[idx] == "X"){
+                    temp =  String(multiply(lhs:finalInput[idx-1], rhs:finalInput[idx+1]))
+                    finalInput[idx-1] = temp
+                    finalInput.removeSubrange(idx...idx+1)
+                    break
+                }
+                if(finalInput[idx] == "/"){
+                    temp = String(divide(lhs:finalInput[idx-1], rhs:finalInput[idx+1]))
+                    finalInput[idx-1] = temp
+                    finalInput.removeSubrange(idx...idx+1)
+                    break
                 }
             }
-            print("after cal X and /, the finalInput: ")
-            dump(finalInput)
         }
+        print("after cal X and /, the finalInput: ")
+        dump(finalInput)
+    }
 
         
         func performAddSubstract(input: [String]){
             var temp:String = "";
             var finished:Bool = false;
-            print("as")
             while(finished != true){
                 for idx in 0...finalInput.count-1 {
                     if (finalInput[idx] == "+"){
                         temp = String(add(lhs:finalInput[idx-1], rhs:finalInput[idx+1]))
                         finalInput[idx-1] = temp
                         finalInput.removeSubrange(idx...idx+1)
-                        print("as1")
                         break
                     }
                     else if (finalInput[idx] == "-"){
                         temp = String(subtract(lhs:finalInput[idx-1], rhs:finalInput[idx+1]))
                         finalInput[idx-1] = temp
                         finalInput.removeSubrange(idx...idx+1)
-                        print("as2")
                         break
                     }
                 }
@@ -416,6 +409,7 @@ class ViewController: UIViewController {
             }
             print("after cal + and -, the finalInput: ")
             dump(finalInput)
+            FinalResultLabel.text = finalInput[0]
         }
         
         
